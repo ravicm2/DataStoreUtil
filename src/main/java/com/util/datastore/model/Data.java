@@ -4,7 +4,6 @@ import org.json.JSONObject;
 
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 
 public class Data {
 
@@ -29,12 +28,12 @@ public class Data {
      *
      * @return JSONObject
      */
-    public Optional<JSONObject> getValue() {
+    public JSONObject getValue() {
 
-        if (Optional.ofNullable(this.value).isEmpty()) {
-            return Optional.empty();
+        if (value != null) {
+            return new JSONObject(value);
         }
-        return Optional.of(new JSONObject(this.value));
+        return null;
     }
 
     /**

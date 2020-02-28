@@ -17,7 +17,7 @@ public class StoreUtility {
 
     public static final String FILE_NAME;
 
-    public static final String DEFAULT_DIR_PATH;
+    public static final String DEFAULT_DIRECTORY_PATH;
 
     public static final int MAX_CHAR_LENGTH_KEY = 32;
     /**
@@ -30,8 +30,8 @@ public class StoreUtility {
     public static final int MAX_SIZE_FILE = 1000000000;
 
     static {
-        FILE_NAME = "%s/@local_data_store.json";
-        DEFAULT_DIR_PATH = FileSystems.getDefault().getPath("").toAbsolutePath().toString();
+        FILE_NAME = "%s/local_data_store.json";
+        DEFAULT_DIRECTORY_PATH = FileSystems.getDefault().getPath("").toAbsolutePath().toString();
     }
 
     static {
